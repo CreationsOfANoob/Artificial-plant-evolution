@@ -9,6 +9,8 @@ public class PlantDisplay : MonoBehaviour
     public float b;
     public float m;
 
+    Renderer m_renderer;
+
     private Plant Plant;
 
     public void GenerateAndDisplayPlant() {
@@ -16,8 +18,18 @@ public class PlantDisplay : MonoBehaviour
         Plant = new PlantFactory().GenerateRandomPlant(probabilities);
         foreach (var branch in Plant.branches.ReturnArray())
         {
-            Debug.DrawLine(branch.Origin.AsVec3(), branch.End.AsVec3());
         }
+        Texture2D plantTexture = new Texture2D(64, 64);
+        for (int x = 0; x < 64; x++)
+        {
+            for (int y = 0; y < 50; y++)
+            {
+                plantTexture.SetPixel(x, y, Color.red);
+            }
+        }
+        plantTexture.Apply();
+        m_renderer = GetComponent<Renderer>();
+        m_renderer.sharedMaterial.mainTexture = plantTexture;
     }
 
     public void Start() {

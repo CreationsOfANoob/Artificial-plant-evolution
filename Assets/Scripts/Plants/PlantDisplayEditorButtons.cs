@@ -7,10 +7,13 @@ using UnityEditor;
 public class PlantDisplayEditorButtons : Editor
 {
     public override void OnInspectorGUI() {
+
+        PlantDisplay plantDisplay = (PlantDisplay)target;
+
         DrawDefaultInspector();
         if (GUILayout.Button("Generate"))
         {
-            Debug.Log("Hello world");
+            plantDisplay.GenerateAndDisplayPlant();
         }
     }
 }
