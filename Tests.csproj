@@ -56,8 +56,9 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Tests/PlantCreation.cs" />
     <Compile Include="Assets/Tests/ProbabilityGraphTests.cs" />
+    <Compile Include="Assets/Tests/PlantCreation.cs" />
+    <Compile Include="Assets/Tests/CoordTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Tests/Tests.asmdef" />

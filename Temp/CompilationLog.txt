@@ -1,0 +1,4 @@
+# Starting compiling Scripts.dll
+/Users/isak/Applications/2020.3.12f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-d6df5a210d2284f168f768340c94a769
+# Starting compiling Tests.dll
+/Users/isak/Applications/2020.3.12f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-56139c1c5600642d9939950b4a0edf9f

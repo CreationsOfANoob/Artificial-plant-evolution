@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -21,18 +22,40 @@ public class Plant
         genome = in_genome;
         branches = in_branches;
     }
+
+    public void AddBranch((float, float, float) p1, (float, float, float) p2) {
+        branches.AddBranch(new Branch(new Coord(), new Coord()));
+    }
 }
 
 public class BranchArray
 {
-    public BranchArray() {
+    private List<Branch> branches;
 
+    public BranchArray(List<Branch> branches = null) {
+        if (branches == null)
+        {
+            branches = new List<Branch>();
+        }
+        this.branches = branches;
+    }
+
+    public void AddBranch(Branch branch) {
+        branches.Add(branch);
+    }
+
+    internal IEnumerable<Branch> ReturnArray() {
+        return branches;
     }
 }
 
 public class Branch
 {
-    public Branch() {
+    internal Coord Origin;
+    internal Coord End;
 
+    public Branch(Coord From, Coord To) {
+        Origin = From;
+        End = To;
     }
 }
