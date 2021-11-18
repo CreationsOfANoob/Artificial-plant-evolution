@@ -1,18 +1,31 @@
 ﻿<Properties StartupConfiguration="{42689578-939C-54C4-A94D-585201809218}|">
-  <MonoDevelop.Ide.ItemProperties.Scripts PreferredExecutionTarget="852c745b-021d-4d59-8397-9158a038b2ed" />
+  <MonoDevelop.Ide.ItemProperties.Scripts PreferredExecutionTarget="4ff4f6d4-5eb4-419e-9690-1731b44e8c84" />
   <MonoDevelop.Ide.ItemProperties.PlantScripts PreferredExecutionTarget="852c745b-021d-4d59-8397-9158a038b2ed" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Plants/Plant.cs">
     <Files>
       <File FileName="Assets/Scripts/Plants/Plant.cs" Line="22" Column="32" />
-      <File FileName="Assets/Scripts/Plants/Genome.cs" Line="5" Column="19" />
-      <File FileName="Assets/Tests/PlantTests.cs" Line="12" Column="29" />
-      <File FileName="Assets/Tests/PlantCreation.cs" Line="25" Column="40" />
-      <File FileName="Assets/Tests/Tests.asmdef" Line="7" Column="18" />
+      <File FileName="Assets/Scripts/Plants/Genome.cs" Line="1" Column="1" />
+      <File FileName="Assets/Tests/PlantCreation.cs" Line="1" Column="1" />
+      <File FileName="Assets/Tests/Tests.asmdef" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Plants/PlantDisplay.cs" Line="8" Column="20" />
+      <File FileName="Assets/Scripts/Plants/PlantDisplayEditorButtons.cs" Line="8" Column="2" />
+      <File FileName="Assets/Scripts/Plants/PlantGenerationManualSettings.cs" Line="3" Column="47" />
+      <File FileName="Assets/Scripts/Plants/ProbabilityGraph.cs" Line="19" Column="52" />
+      <File FileName="Assets/Tests/ProbabilityGraphTests.cs" Line="44" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Artificial_Plant_Evolution" expanded="True" selected="True" />
+          <Node name="Artificial_Plant_Evolution" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Plants" expanded="True">
+                  <Node name="Plant.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="Tests" expanded="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>

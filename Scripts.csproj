@@ -58,6 +58,10 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/Plants/Plant.cs" />
     <Compile Include="Assets/Scripts/Plants/Genome.cs" />
+    <Compile Include="Assets/Scripts/Plants/PlantDisplay.cs" />
+    <Compile Include="Assets/Scripts/Plants/PlantDisplayEditorButtons.cs" />
+    <Compile Include="Assets/Scripts/Plants/PlantGenerationManualSettings.cs" />
+    <Compile Include="Assets/Scripts/Plants/ProbabilityGraph.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Scripts/Scripts.asmdef" />
