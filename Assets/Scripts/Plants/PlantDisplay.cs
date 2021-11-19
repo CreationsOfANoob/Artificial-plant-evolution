@@ -20,7 +20,7 @@ public class PlantDisplay : MonoBehaviour
         Plant = new PlantFactory().GenerateRandomPlant(probabilities, 10);
 
 
-        var pixelScale = ((float)pixels) / 2f;
+        var pixelScale = ((float)pixels) / 10f;
         var dimensions = new Coord(pixels);
         var midPoint = new Coord(dimensions.x / 2f, 0f);
 

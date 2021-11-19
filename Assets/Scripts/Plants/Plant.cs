@@ -59,7 +59,7 @@ public class BranchArray
         }
     }
 
-    internal IEnumerable<Branch> ReturnArray() {
+    internal List<Branch> ReturnArray() {
         return branches;
     }
 

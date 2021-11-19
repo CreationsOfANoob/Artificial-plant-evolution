@@ -15,7 +15,7 @@ internal class PlantFactory
         var origin = Coord.Origo();
         var angle = 0f;
 
-        newLayerBranches = EvaluateIfAddBranch(newLayerBranches, origin, angle); //Add Initial branch
+        EvaluateIfAddBranch(newLayerBranches, origin, angle, 0); //Add Initial branch
 
         var branchDepth = 0;
         while (branchDepth < maxBranchDepth)
@@ -27,11 +27,16 @@ internal class PlantFactory
 
             foreach (var branch in oldLayerBranches.ReturnArray())
             {
-                Debug.Log("added branch");
-
                 origin = branch.End;
                 angle = (float)Math.Atan2(branch.asVector.x, branch.asVector.y);
-                newLayerBranches = EvaluateIfAddBranch(newLayerBranches, origin, angle);
+                var lBefore = 1;
+                var lAfter = 0;
+                while (lBefore != lAfter)
+                {
+                    lBefore = newLayerBranches.ReturnArray().Count;
+                    EvaluateIfAddBranch(newLayerBranches, origin, angle, branchDepth);
+                    lAfter = newLayerBranches.ReturnArray().Count;
+                }
             }
         }
 
@@ -40,10 +45,11 @@ internal class PlantFactory
         return plant;
     }
 
-    private BranchArray EvaluateIfAddBranch(BranchArray branchArray, Coord origin, float angle) {
-        angle += (UnityEngine.Random.value - 0.5f) * 0.1f; //randomize rotation
-        branchArray.AddBranch(new Branch(origin, Coord.LengthAndAngle(angle + (Mathf.PI / 2f), 1f, origin)));
-        Debug.Log(branchArray.ReturnArray());
-        return branchArray;
+    private void EvaluateIfAddBranch(BranchArray branchArray, Coord origin, float angle, int branchDepth) {
+        angle += (UnityEngine.Random.value - 0.5f) * 2f; //randomize rotation
+        if (UnityEngine.Random.value < 0.5 || branchDepth == 0)
+        {
+            branchArray.AddBranch(new Branch(origin, Coord.LengthAndAngle(angle + (Mathf.PI / 2f), 1f, origin)));
+        }
     }
 }
