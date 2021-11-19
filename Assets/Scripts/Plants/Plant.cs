@@ -67,9 +67,9 @@ public class BranchArray
         var newBranchList = new List<Branch>();
         foreach (var branch in this.branches)
         {
-            newBranchList.Add(branch.MemberWiseClone());
+            newBranchList.Add(branch.Clone());
         }
-        var newBranchArrayObject = new BranchArray();
+        var newBranchArrayObject = new BranchArray(newBranchList);
         return newBranchArrayObject;
     }
 }
@@ -90,7 +90,11 @@ public class Branch : ICloneable
         End = To;
     }
 
-    public object Clone() {
-        throw new NotImplementedException();
+    public Branch Clone() {
+        return (Branch)this.MemberwiseClone();
+    }
+
+    object ICloneable.Clone() {
+        return Clone();
     }
 }
