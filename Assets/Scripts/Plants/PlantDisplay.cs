@@ -9,7 +9,7 @@ public class PlantDisplay : MonoBehaviour
     public float b;
     public float m;
 
-    Renderer m_renderer;
+    public GameObject renderObject;
 
     private Plant Plant;
 
@@ -28,8 +28,7 @@ public class PlantDisplay : MonoBehaviour
             }
         }
         plantTexture.Apply();
-        m_renderer = GetComponent<Renderer>();
-        m_renderer.sharedMaterial.mainTexture = plantTexture;
+        renderObject.GetComponent<MeshRenderer>().sharedMaterial.mainTexture = plantTexture;
     }
 
     public void Start() {
