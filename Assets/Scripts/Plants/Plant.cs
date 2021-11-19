@@ -23,14 +23,22 @@ public class Plant
         branches = in_branches;
     }
 
-    public void AddBranch((float, float, float) p1, (float, float, float) p2) {
-        branches.AddBranch(new Branch(new Coord(), new Coord()));
+    public void SetBranches(BranchArray branches) {
+        this.branches = branches;
+    }
+
+    public void AddBranch(Coord p1, Coord p2) {
+        branches.AddBranch(new Branch(p1, p2));
     }
 }
 
 public class BranchArray
 {
     private List<Branch> branches;
+
+    public void Empty() {
+        branches = new List<Branch>();
+    }
 
     public BranchArray(List<Branch> branches = null) {
         if (branches == null)
@@ -44,18 +52,45 @@ public class BranchArray
         branches.Add(branch);
     }
 
+    public void AddBranches(BranchArray branches) {
+        foreach (var branch in branches.ReturnArray())
+        {
+            this.branches.Add(branch);
+        }
+    }
+
     internal IEnumerable<Branch> ReturnArray() {
         return branches;
     }
+
+    internal BranchArray Clone() {
+        var newBranchList = new List<Branch>();
+        foreach (var branch in this.branches)
+        {
+            newBranchList.Add(branch.MemberWiseClone());
+        }
+        var newBranchArrayObject = new BranchArray();
+        return newBranchArrayObject;
+    }
 }
 
-public class Branch
+public class Branch : ICloneable
 {
     internal Coord Origin;
     internal Coord End;
 
+    internal Coord asVector { get
+        {
+            return End - Origin;
+        }
+    }
+
     public Branch(Coord From, Coord To) {
         Origin = From;
         End = To;
+    }
+
+    public object Clone() {
+        throw new NotImplementedException();
     }
 }

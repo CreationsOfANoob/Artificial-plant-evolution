@@ -170,6 +170,7 @@ MonoBehaviour:
   a: 0
   b: 0
   m: 0
+  pixels: 128
   renderObject: {fileID: 905452887}
 --- !u!1 &905452887
 GameObject:
