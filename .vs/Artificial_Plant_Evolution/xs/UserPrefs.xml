@@ -1,21 +1,21 @@
 ﻿<Properties StartupConfiguration="{42689578-939C-54C4-A94D-585201809218}|">
-  <MonoDevelop.Ide.ItemProperties.Scripts PreferredExecutionTarget="11917a37-c734-4a2c-9492-220d69d6f556" />
+  <MonoDevelop.Ide.ItemProperties.Scripts PreferredExecutionTarget="e4b65776-29d5-42b0-9a10-1bbf4eceb0e5" />
   <MonoDevelop.Ide.ItemProperties.PlantScripts PreferredExecutionTarget="852c745b-021d-4d59-8397-9158a038b2ed" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TextureEditing/DrawFunctions.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Plants/Coord.cs">
     <Files>
-      <File FileName="Assets/Scripts/Plants/Plant.cs" Line="44" Column="30" />
+      <File FileName="Assets/Scripts/Plants/Plant.cs" Line="62" Column="18" />
       <File FileName="Assets/Scripts/Plants/Genome.cs" />
       <File FileName="Assets/Tests/PlantCreation.cs" />
       <File FileName="Assets/Tests/Tests.asmdef" />
-      <File FileName="Assets/Scripts/Plants/PlantDisplay.cs" Line="31" Column="47" />
+      <File FileName="Assets/Scripts/Plants/PlantDisplay.cs" />
       <File FileName="Assets/Scripts/Plants/PlantDisplayEditorButtons.cs" />
       <File FileName="Assets/Scripts/Plants/PlantGenerationManualSettings.cs" />
       <File FileName="Assets/Scripts/Plants/ProbabilityGraph.cs" />
       <File FileName="Assets/Tests/ProbabilityGraphTests.cs" />
       <File FileName="Assets/Scripts/Plants/PlantFactory.cs" />
-      <File FileName="Assets/Scripts/Plants/Coord.cs" />
+      <File FileName="Assets/Scripts/Plants/Coord.cs" Line="54" Column="50" />
       <File FileName="Assets/Tests/CoordTests.cs" />
-      <File FileName="Assets/Scripts/TextureEditing/DrawFunctions.cs" Line="7" Column="6" />
+      <File FileName="Assets/Scripts/TextureEditing/DrawFunctions.cs" Line="11" Column="48" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -23,10 +23,10 @@
           <Node name="Artificial_Plant_Evolution" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Plants" expanded="True" />
-                <Node name="TextureEditing" expanded="True">
-                  <Node name="DrawFunctions.cs" selected="True" />
+                <Node name="Plants" expanded="True">
+                  <Node name="Coord.cs" selected="True" />
                 </Node>
+                <Node name="TextureEditing" expanded="True" />
               </Node>
               <Node name="Tests" expanded="True" />
             </Node>

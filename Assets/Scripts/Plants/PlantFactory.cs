@@ -40,7 +40,7 @@ internal class PlantFactory
             }
         }
 
-        var plant = new Plant();
+        var plant = new Plant(Genome.RandomGenome());
         plant.SetBranches(finalBranches);
         return plant;
     }
