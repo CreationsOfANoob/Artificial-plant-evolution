@@ -59,6 +59,7 @@
     <Compile Include="Assets/Tests/CoordTests.cs" />
     <Compile Include="Assets/Tests/ProbabilityGraphTests.cs" />
     <Compile Include="Assets/Tests/PlantCreation.cs" />
+    <Compile Include="Assets/Tests/GenomeTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Tests/Tests.asmdef" />

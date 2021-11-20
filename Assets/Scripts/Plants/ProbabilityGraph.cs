@@ -18,4 +18,8 @@ public class ProbabilityGraph
     public float evaluate(float x) {
         return C * (float)Math.Pow((x + b), a) + m;
     }
+
+    public string Print() {
+        return (C.ToString() + " * (x + " + b.ToString() + ")^" + a.ToString() + " + " + m.ToString());
+    }
 }

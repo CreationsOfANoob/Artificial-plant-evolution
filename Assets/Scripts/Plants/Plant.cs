@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Plant
 {
-    public Genome genome;
+    public PlantGenomeData genome;
     public BranchArray branches;
 
     public Plant(Genome in_genome = null, BranchArray in_branches = null)
@@ -19,7 +19,7 @@ public class Plant
             in_branches = new BranchArray();
         }
 
-        genome = in_genome;
+        genome = new PlantGenomeData(in_genome);
         branches = in_branches;
     }
 

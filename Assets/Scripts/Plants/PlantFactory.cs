@@ -8,6 +8,11 @@ internal class PlantFactory
     }
 
     internal Plant GenerateRandomPlant(ProbabilityGraph probabilities, int maxBranchDepth) {
+        // Create genome
+        var genome = Genome.RandomGenome();
+        var variables = new PlantGenomeData(genome);
+
+        // Setup branch generation
         var finalBranches = new BranchArray();
         var oldLayerBranches = new BranchArray();
         var newLayerBranches = new BranchArray();
@@ -40,6 +45,7 @@ internal class PlantFactory
             }
         }
 
+        // Create plant and add data
         var plant = new Plant(Genome.RandomGenome());
         plant.SetBranches(finalBranches);
         return plant;

@@ -19,7 +19,6 @@ public class PlantDisplay : MonoBehaviour
         var probabilities = new ProbabilityGraph(C, b, a, m);
         Plant = new PlantFactory().GenerateRandomPlant(probabilities, 10);
 
-
         var pixelScale = ((float)pixels) / 10f;
         var dimensions = new Coord(pixels);
         var midPoint = new Coord(dimensions.x / 2f, 0f);

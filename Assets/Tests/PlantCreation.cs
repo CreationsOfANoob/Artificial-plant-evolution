@@ -16,7 +16,7 @@ public class PlantCreation
     [Test]
     public void PlantCreatedHasGenome() {
         var result = new Plant().genome;
-        Assert.IsInstanceOf<Genome>(result);
+        Assert.IsInstanceOf<PlantGenomeData>(result);
     }
 
     [Test]
