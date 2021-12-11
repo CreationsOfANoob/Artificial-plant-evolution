@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class PlantDisplay : MonoBehaviour
 {
-    public float C;
-    public float a;
-    public float b;
-    public float m;
-
+    public string genomeData;
     public int pixels = 64;
 
     public GameObject renderObject;
@@ -16,8 +12,8 @@ public class PlantDisplay : MonoBehaviour
     private Plant Plant;
 
     public void GenerateAndDisplayPlant() {
-        var probabilities = new ProbabilityGraph(C, b, a, m);
-        Plant = new PlantFactory().GenerateRandomPlant(probabilities, 10);
+        //Plant = new PlantFactory().GenerateRandomPlant(probabilities, 10);
+        Plant = new PlantFactory().GeneratePlantNoProbabilities(new Genome(genomeData));
 
         var pixelScale = ((float)pixels) / 10f;
         var dimensions = new Coord(pixels);

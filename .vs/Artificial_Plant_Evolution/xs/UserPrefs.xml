@@ -1,22 +1,23 @@
 ﻿<Properties StartupConfiguration="{42689578-939C-54C4-A94D-585201809218}|">
-  <MonoDevelop.Ide.ItemProperties.Scripts PreferredExecutionTarget="e4b65776-29d5-42b0-9a10-1bbf4eceb0e5" />
+  <MonoDevelop.Ide.ItemProperties.Scripts PreferredExecutionTarget="bf6a7332-926e-4351-91f8-0730c56e1fbc" />
   <MonoDevelop.Ide.ItemProperties.PlantScripts PreferredExecutionTarget="852c745b-021d-4d59-8397-9158a038b2ed" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Plants/PlantDisplayEditorButtons.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Plants/PlantGenomeData.cs">
     <Files>
-      <File FileName="Assets/Scripts/Plants/Plant.cs" Line="22" Column="22" />
-      <File FileName="Assets/Scripts/Plants/Genome.cs" Line="41" Column="23" />
-      <File FileName="Assets/Tests/PlantCreation.cs" Line="19" Column="44" />
+      <File FileName="Assets/Scripts/Plants/Plant.cs" Line="7" Column="38" />
+      <File FileName="Assets/Scripts/Plants/Genome.cs" Line="40" Column="25" />
+      <File FileName="Assets/Tests/PlantCreation.cs" Line="19" Column="55" />
       <File FileName="Assets/Tests/Tests.asmdef" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Plants/PlantDisplay.cs" Line="20" Column="75" />
+      <File FileName="Assets/Scripts/Plants/PlantDisplay.cs" Line="21" Column="86" />
       <File FileName="Assets/Scripts/Plants/PlantDisplayEditorButtons.cs" Line="16" Column="52" />
-      <File FileName="Assets/Scripts/Plants/ProbabilityGraph.cs" Line="23" Column="104" />
-      <File FileName="Assets/Tests/ProbabilityGraphTests.cs" Line="44" Column="6" />
-      <File FileName="Assets/Scripts/Plants/PlantFactory.cs" Line="31" Column="38" />
-      <File FileName="Assets/Scripts/Plants/Coord.cs" Line="54" Column="50" />
-      <File FileName="Assets/Tests/CoordTests.cs" Line="20" Column="6" />
-      <File FileName="Assets/Scripts/TextureEditing/DrawFunctions.cs" Line="15" Column="40" />
-      <File FileName="Assets/Scripts/Plants/PlantGenomeData.cs" Line="15" Column="49" />
-      <File FileName="Assets/Tests/GenomeTests.cs" Line="50" Column="6" />
+      <File FileName="Assets/Scripts/Plants/ProbabilityGraph.cs" Line="1" Column="1" />
+      <File FileName="Assets/Tests/ProbabilityGraphTests.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Plants/PlantFactory.cs" Line="14" Column="37" />
+      <File FileName="Assets/Scripts/Plants/Coord.cs" />
+      <File FileName="Assets/Tests/CoordTests.cs" />
+      <File FileName="Assets/Scripts/TextureEditing/DrawFunctions.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Plants/PlantGenomeData.cs" Line="3" Column="40" />
+      <File FileName="Assets/Tests/GenomeTests.cs" />
+      <File FileName="Assets/Scripts/Plants/PlantGenomeData.cs" Line="4" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,7 +26,7 @@
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="Plants" expanded="True">
-                  <Node name="PlantDisplayEditorButtons.cs" selected="True" />
+                  <Node name="PlantGenomeData.cs" selected="True" />
                 </Node>
                 <Node name="TextureEditing" expanded="True" />
               </Node>

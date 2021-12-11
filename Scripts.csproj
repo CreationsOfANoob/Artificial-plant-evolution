@@ -63,8 +63,9 @@
     <Compile Include="Assets/Scripts/Plants/Plant.cs" />
     <Compile Include="Assets/Scripts/Plants/PlantDisplay.cs" />
     <Compile Include="Assets/Scripts/TextureEditing/DrawFunctions.cs" />
+    <Compile Include="Assets/Scripts/Plants/ProbabilityPlantGenomeData.cs" />
     <Compile Include="Assets/Scripts/Plants/Genome.cs" />
-    <Compile Include="Assets/Scripts/Plants/PlantGenomeData.cs" />
+    <Compile Include="Assets/Scripts/Plants/PlantGenomeProperties.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Scripts/Scripts.asmdef" />
