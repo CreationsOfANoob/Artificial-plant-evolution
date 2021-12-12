@@ -8,6 +8,8 @@ internal class PlantFactory
     }
 
     internal Plant GeneratePlantNoProbabilities(Genome genome) {
+        var piHalf = (Mathf.PI / 2f);
+
         //Genome:
         //16 genes for properties
         //for each branch layer, 5 genes: number 0-4, length, widthPercent 0.1f-1f, spreading 0.1f-0.9f, up-factor 0f-1f,
@@ -18,39 +20,51 @@ internal class PlantFactory
         var newLayerBranches = new BranchArray();
 
         var origin = Coord.Origo();
-        var angle = 0f;
+        var angle = piHalf;
+
+        oldLayerBranches.AddBranch(new Branch(origin, Coord.LengthAndAngle(angle, genomeData.initialBranchLength))); //Add initial branch
 
         var branchDepth = 0;
-        while (branchDepth < genomeData.numBranchLayers)
+        if (genomeData.numBranchLayers == 0)
         {
             finalBranches.AddBranches(oldLayerBranches);
-            oldLayerBranches = newLayerBranches.Clone();
-            newLayerBranches.Empty();
-
-            var layerProperties = genomeData.getLayerProperties(branchDepth);
-            if (layerProperties.numBranches == 0)
+        }
+        else
+        {
+            while (branchDepth < genomeData.numBranchLayers)
             {
-                break;
-            }
-            else
-            {
-                foreach (var branch in oldLayerBranches.ReturnArray())
+                var layerProperties = genomeData.getLayerProperties(branchDepth);
+                if (layerProperties.numBranches == 0)
                 {
-                    origin = branch.End;
-                    angle = (float)Math.Atan2(branch.asVector.x, branch.asVector.y);
-
-                    for (int branchN = 0; branchN < layerProperties.numBranches; branchN++)
+                    break;
+                }
+                else if (layerProperties.numBranches != 0)
+                {
+                    foreach (var branch in oldLayerBranches.ReturnArray())
                     {
-                        newLayerBranches.AddBranch(new Branch(origin, Coord.LengthAndAngle(angle + (Mathf.PI / 2f), 1f, origin)));
+                        origin = branch.End;
+                        angle = (float)Mathf.Atan2(branch.asVector.y, branch.asVector.x);
+
+                        for (int branchN = 0; branchN < layerProperties.numBranches; branchN++)
+                        {
+                            var branchAngle = Mathf.LerpAngle(angle * Mathf.Rad2Deg, piHalf * Mathf.Rad2Deg, layerProperties.upFactor) * Mathf.Deg2Rad + (((branchN + 0.5f) / layerProperties.numBranches) - 0.5f) * layerProperties.branchSpread;
+                            newLayerBranches.AddBranch(new Branch(origin, Coord.LengthAndAngle(branchAngle, layerProperties.branchLength, origin)));
+                        }
                     }
+
                 }
 
+                finalBranches.AddBranches(oldLayerBranches);
+                oldLayerBranches = newLayerBranches.Clone();
+                newLayerBranches.Empty();
+
+                branchDepth++;
             }
-
-            branchDepth++;
         }
-
-        return new Plant();
+        // Create plant and add data
+        var plant = new Plant(Genome.RandomGenome());
+        plant.SetBranches(finalBranches);
+        return plant;
     }
 
     internal Plant GenerateRandomPlant(ProbabilityGraph probabilities, int maxBranchDepth) {

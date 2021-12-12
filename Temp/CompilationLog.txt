@@ -1,4 +1,4 @@
 # Starting compiling Scripts.dll
-/Users/isak/Applications/2020.3.12f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-5d7e19613d91443c9800cd0d963cb67e
+/Users/isak/Applications/2020.3.12f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-491bf218fc81f4140a3d820ea904dee5
 # Starting compiling Tests.dll
-/Users/isak/Applications/2020.3.12f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-33df758cf8a284cf9bf29eff15974b70
+/Users/isak/Applications/2020.3.12f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-55b94d26a0cda49b0a2cb938efe39b18

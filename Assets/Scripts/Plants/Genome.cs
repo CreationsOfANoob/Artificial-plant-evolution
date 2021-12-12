@@ -5,7 +5,7 @@ public class Genome
 {
     // Genome is a hexadecimal string
 
-    public static readonly int maxGenomeLength = 64;
+    public static readonly int maxGenomeLength = 100;
     public static readonly int geneLength = 2;
 
     public static string empty { get { var data = ""; for (int i = 0; i < maxGenomeLength; i++) { data += "0"; } return data; } }
@@ -38,6 +38,7 @@ public class Genome
         var hex = Gene(i);
         var intVal = int.Parse(hex, System.Globalization.NumberStyles.HexNumber);
         var fltVal = ((float)intVal / 255f) * (to - from) + from;
+        Debug.Log(fltVal);
         return fltVal;
     }
 }

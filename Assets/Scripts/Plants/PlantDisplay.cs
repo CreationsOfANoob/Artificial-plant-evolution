@@ -13,7 +13,7 @@ public class PlantDisplay : MonoBehaviour
 
     public void GenerateAndDisplayPlant() {
         //Plant = new PlantFactory().GenerateRandomPlant(probabilities, 10);
-        Plant = new PlantFactory().GeneratePlantNoProbabilities(new Genome(genomeData));
+        Plant = new PlantFactory().GeneratePlantNoProbabilities(Genome.RandomGenome());//new Genome(genomeData));
 
         var pixelScale = ((float)pixels) / 10f;
         var dimensions = new Coord(pixels);

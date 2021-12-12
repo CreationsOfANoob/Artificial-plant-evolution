@@ -32,6 +32,18 @@ public class GenomeTests
     }
 
     [Test]
+    public void GenomeGetgeneAsFloatSecondGeneMiddleVal() {
+        var foo = new Genome("ff80");
+        Assert.AreEqual(foo.geneToFloat(1, 0f, 255f), 128f);
+    }
+
+    [Test]
+    public void GenomeGetgeneAsFloatSecondGeneFalseVal() {
+        var foo = new Genome("ff81");
+        Assert.AreNotEqual(foo.geneToFloat(1, 0f, 255f), 128f);
+    }
+
+    [Test]
     public void GenomeGetgeneAsFloatOtherValue() {
         var foo = new Genome("ff00");
         Assert.AreEqual(foo.geneToFloat(0, 0f, 1f), 1f);
